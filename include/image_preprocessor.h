@@ -2,11 +2,12 @@
 #define IMAGE_PREPROCESSOR_H
 
 #include <string>
+#include <vector>
 
 class ImagePreprocessor {
 public:
     explicit ImagePreprocessor(const std::string &image_path);
-    bool preprocess();
+    std::vector<float> preprocess();
 
 private:
     std::string image_path_;

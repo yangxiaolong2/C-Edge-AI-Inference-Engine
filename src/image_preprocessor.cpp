@@ -4,8 +4,11 @@
 ImagePreprocessor::ImagePreprocessor(const std::string &image_path)
     : image_path_(image_path) {}
 
-bool ImagePreprocessor::preprocess() {
+std::vector<float> ImagePreprocessor::preprocess() {
     std::cout << "Preprocessing image: " << image_path_ << "\n";
-    // TODO: Load and preprocess image for model inference.
-    return true;
+    // TODO: Replace with real image loading, resizing, and normalization.
+    const int width = 224;
+    const int height = 224;
+    const int channels = 3;
+    return std::vector<float>(width * height * channels, 0.0f);
 }
